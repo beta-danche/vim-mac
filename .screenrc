@@ -1,0 +1,30 @@
+# 启动时不显示欢迎屏幕
+startup_message off
+#
+# # 屏幕缓冲区 5120 行。
+defscrollback 512000
+#
+# #在vi或less之类退出时完全恢复到原屏幕内容
+altscreen off
+
+termcapinfo xterm* ti@:te@
+
+# 自动detach
+autodetach on
+
+# 编码
+defutf8 on
+defencoding utf8
+encoding UTF-8 UTF-8
+
+
+# #显示屏幕下方状态栏
+hardstatus on
+hardstatus alwayslastline
+# #状态栏的显示信息定制 ( 具体符号代表什么请 man screen )
+#hardstatus string "%{.bw}%-w%{+u .rw}%n %t%{-}%+w %=%{.bw} %Y-%m-%d %D %c:%s "
+hardstatus string "%{= kG}[ %{G}%H %{g}]%{.bw}%-w%{+u .rw}%n %t%{-}%+w %=%{.bw} %Y-%m-%d %D %c:%s "
+# #绑定 Ctrl+a-w 为查看所有窗口列表
+bind w windowlist -b
+export PS1="[\[\e[31m\u\e[0m\]@\e[33m\h\e[0m \e[34m\j\e[0m \e[36m\W\e[0m]\$ "
+export PS2="[\[\e[31m\u\e[0m\]@\e[33m\h\e[0m \e[34m\j\e[0m \e[36m\W\e[0m]> "

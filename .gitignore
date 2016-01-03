@@ -1,0 +1,16 @@
+*.swp
+*.swo
+*.pyc
+*.bak
+*.log
+*~
+*db_config_dev.py
+local_config.py
+env
+nohup.out
+log/*
+tags
+ctags
+cluster_alarm.py
+attachments/
+.DS_Store
